@@ -1,0 +1,122 @@
+<html>
+    <head>
+<style>
+
+body{
+    background-color: blanchedalmond;
+}
+.box{
+    background-color: aqua;
+    border-radius: 3%;
+    text-align: center;
+    height: 140px;
+    width: 30%;
+    border: black 4px solid;
+}
+.boxtwo{
+    background-color: aqua;
+    border-radius: 3%;
+    text-align: center;
+    height: 140px;
+    width: 30%;
+    margin-top: 100px;
+    border: black 4px solid;
+}
+aside{
+    margin-left: 800px;
+    margin-top: -140px;
+}
+.far{
+    margin-left: 800px;
+    margin-top: -120px;
+
+}
+
+
+</style>
+    </head>
+
+<header>
+    <h1 id="ins">INST 377 - LAB 4</h1>
+</header>
+
+<body>
+    <section>
+<div class="box">
+    <form>
+        <label for ="name">Name: </label>
+        <input type="text" id ="name">
+        <input type ="submit" value ="Alert me!" onclick="helloName()"></submit>
+
+        <script type="text/javascript">
+            function helloName(){
+                document.getElementById("name")
+                let nameinput = document.getElementById("name").value
+                text = 'Hi ' + nameinput
+                alert(text)
+            }
+        </script>
+    </form>
+</div>
+</section>
+
+<section>
+<aside>
+<div class="box">
+    <input type="button" value="Change Color" onclick="changecolor()">
+    <script type="text/javascript">
+        function changecolor(){
+
+            if (document.body.style.background = 'blanchedalmond'){
+                document.body.style.background = 'blue';
+            }
+            else {
+                document.body.style.background == 'blanchedalmond'
+            }
+        }
+    </script>
+
+</div>
+</aside>
+</section>
+
+<section>
+    <div class="boxtwo">
+        <form name="playtest">
+            <label>Text Tester:</label>
+            <input type="text" placeholder="Text" id="taste" required>
+            <button type="button" onclick="validatetext()">Validate Text</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+    
+
+        function validatetext(){
+            var validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if(validationRegex.test(document.playtest.taste.value)) {
+                alert('How about Nahhh');
+            }
+        return true;
+
+        }
+    
+    </script>
+</section>
+
+<section>
+    <aside>
+    <div class="boxtwo">
+            <input type="button" value="Add Text" onclick="addtext()"></button>
+            <script type="text/javascript">
+                function addtext(){
+                    let newt = document.getElementById("ins");
+                newt.innerText = newt.innerText + " new stuff"; 
+                }
+                
+                </script>
+    </div>
+</aside>
+</section>
+
+</body>
+</html>
